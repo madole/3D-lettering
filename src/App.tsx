@@ -15,13 +15,21 @@ function App() {
         camera={{ position: [-1, 2, 100], fov: 50 }}
       >
         <Stars />
-        <hemisphereLight intensity={0.35} />
+        {/*<hemisphereLight intensity={0.35} />*/}
         <ambientLight intensity={0.5} />
         <spotLight
-          position={[-100, 100, 50]}
+          position={[-200, 100, 50]}
           angle={0.3}
           penumbra={1}
-          intensity={0.8}
+          intensity={1}
+          castShadow
+          color={"blue"}
+        />
+        <spotLight
+          position={[200, 100, 50]}
+          angle={0.3}
+          penumbra={1}
+          intensity={1}
           castShadow
           color={"blue"}
         />
